@@ -32,3 +32,6 @@ jobs:
       - name: Run tests and build
         run: ./mvnw --batch-mode clean verify
 
+      - name: Build Docker image
+        run: docker build -t springboot-docker-ci:latest .
+
