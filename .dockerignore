@@ -1,0 +1,21 @@
+# Maven build output
+target/
+
+# Git
+.git/
+.gitignore
+
+# IDE files
+.idea/
+.vscode/
+*.iml
+
+# macOS
+.DS_Store
+
+# Logs
+*.log
+
+# Local environment and secrets
+.env
+.env.*

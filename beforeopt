@@ -1,0 +1,25 @@
+waelmahfouz@Waels-MacBook-Air demo % docker history demo-app:latest 
+IMAGE          CREATED          CREATED BY                                      SIZE      COMMENT
+df4e587eb6da   38 minutes ago   ENTRYPOINT ["java" "-jar" "app.jar"]            0B        buildkit.dockerfile.v0
+<missing>      38 minutes ago   EXPOSE [8080/tcp]                               0B        buildkit.dockerfile.v0
+<missing>      38 minutes ago   COPY /app/target/*.jar app.jar # buildkit       52.6MB    buildkit.dockerfile.v0
+<missing>      4 hours ago      WORKDIR /app                                    8.19kB    buildkit.dockerfile.v0
+<missing>      8 days ago       ENTRYPOINT ["/__cacert_entrypoint.sh"]          0B        buildkit.dockerfile.v0
+<missing>      8 days ago       COPY --chmod=755 entrypoint.sh /__cacert_ent…   12.3kB    buildkit.dockerfile.v0
+<missing>      8 days ago       RUN /bin/sh -c set -eux;     echo "Verifying…   12.3kB    buildkit.dockerfile.v0
+<missing>      8 days ago       RUN /bin/sh -c set -eux;     ARCH="$(dpkg --…   166MB     buildkit.dockerfile.v0
+<missing>      8 days ago       ENV JAVA_VERSION=jdk-21.0.12.1+1                0B        buildkit.dockerfile.v0
+<missing>      8 days ago       RUN /bin/sh -c set -eux;     apt-get update;…   60.5MB    buildkit.dockerfile.v0
+<missing>      8 days ago       ENV LANG=en_US.UTF-8 LANGUAGE=en_US:en LC_AL…   0B        buildkit.dockerfile.v0
+<missing>      8 days ago       ENV PATH=/opt/java/openjdk/bin:/usr/local/sb…   0B        buildkit.dockerfile.v0
+<missing>      8 days ago       ENV JAVA_HOME=/opt/java/openjdk                 0B        buildkit.dockerfile.v0
+<missing>      2 weeks ago      umoci raw add-layer --image /home/buildd/roc…   12.3kB    Add rock control metadata
+<missing>      2 weeks ago      umoci config --image /home/buildd/rockcraft-…   0B        Set annotations
+<missing>      2 weeks ago      umoci config --image /home/buildd/rockcraft-…   0B        Set labels
+<missing>      2 weeks ago      umoci config --image /home/buildd/rockcraft-…   0B        Set default PATH for bare-based rock
+<missing>      2 weeks ago      umoci config --image /home/buildd/rockcraft-…   0B        Set default commands
+<missing>      2 weeks ago      umoci config --image /home/buildd/rockcraft-…   0B        Set entrypoint
+<missing>      2 weeks ago      umoci raw add-layer --image /home/buildd/roc…   136MB     
+waelmahfouz@Waels-MacBook-Air demo % docker image inspect demo-app --format '{{.Size}}'
+575762989
+
